@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="contoso" constructor="excelexport" version="0.0.1" display-name-key="excelexport" description-key="excelexport description" control-type="standard">
+    <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
+    <property name="dataToExport" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="ButtonText" display-name-key="Property_ButtonText" description-key="Property_ButtonText" of-type="SingleLine.Text" usage="bound" required="true" default-value = "Export to Excel" />
+    <property name="FileName" display-name-key="Property_FileName" description-key="Property_FileName" of-type="SingleLine.Text" usage="bound" required="true" default-value = "exportResult"/>
+    <property name="ButtonHeight" display-name-key="Property_ButtonHeight" description-key="Property_ButtonHeight" of-type="SingleLine.Text" usage="bound" required="true" default-value = "60"/>
+    <property name="TextColor" display-name-key="Property_TextColor" description-key="Property_TextColor" of-type="SingleLine.Text" usage="bound" required="true" default-value="white"/>
+    <property name="TextSize" display-name-key="Property_TextSize" description-key="Property_TextSize" of-type="SingleLine.Text" usage="bound" required="true" default-value="15px"/>
+    <property name="Font" display-name-key="Property_Font" description-key="Property_Font" of-type="SingleLine.Text" usage="bound" required="true" default-value="verdana"/>
+    <property name="BackgroundColor" display-name-key="Property_BackgroundColor" description-key="Property_BackgroundColor" of-type="SingleLine.Text" usage="bound" required="true" default-value="Purple"/>
+
+
+    <!-- 
+      Property node's of-type attribute can be of-type-group attribute. 
+      Example:
+      <type-group name="numbers">
+        <type>Whole.None</type>
+        <type>Currency</type>
+        <type>FP</type>
+        <type>Decimal</type>
+      </type-group>
+      <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
+    -->
+    <resources>
+      <code path="index.ts" order="1"/>
+      <!-- UNCOMMENT TO ADD MORE RESOURCES
+      <css path="css/excelexport.css" order="1" />
+      <resx path="strings/excelexport.1033.resx" version="1.0.0" />
+      -->
+    </resources>
+    <!-- UNCOMMENT TO ENABLE THE SPECIFIED API
+    <feature-usage>
+      <uses-feature name="Device.captureAudio" required="true" />
+      <uses-feature name="Device.captureImage" required="true" />
+      <uses-feature name="Device.captureVideo" required="true" />
+      <uses-feature name="Device.getBarcodeValue" required="true" />
+      <uses-feature name="Device.getCurrentPosition" required="true" />
+      <uses-feature name="Device.pickFile" required="true" />
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+    -->
+  </control>
+</manifest>
