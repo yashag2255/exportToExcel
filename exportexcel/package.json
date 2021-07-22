@@ -12,7 +12,7 @@
     "@angular/core": "^8.2.14",
     "@types/node": "^10.12.18",
     "@types/powerapps-component-framework": "^1.2.0",
-    "xlsx": "^0.15.2",
+    "xlsx": "^0.17.0",
     "xlsx-style": "^0.8.13"
   },
   "devDependencies": {
