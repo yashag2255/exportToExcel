@@ -9,7 +9,7 @@
     "start": "pcf-scripts start"
   },
   "dependencies": {
-    "@angular/core": "^8.2.14",
+    "@angular/core": "^11.0.5",
     "@types/node": "^10.12.18",
     "@types/powerapps-component-framework": "^1.2.0",
     "xlsx": "^0.15.2",
